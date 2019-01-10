@@ -1,5 +1,5 @@
 import argparse,smtplib 
-import subprocess as sp
+import subprocess as sunproc
 import urllib.request
 from email.mime.multipart import MIMEMultipart 
 from email.mime.text import MIMEText 
@@ -21,12 +21,12 @@ def exec_ps():
 
 	args = parser.parse_args()
 
-	psResult = sp.Popen([r'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe',
+	psResult = subProc.Popen([r'C:\WINDOWS\system32\WindowsPowerShell\v1.0\powershell.exe',
 	'-ExecutionPolicy',
 	'unrestricted',
 	'. C://Windows//Temp//test.ps1',
 	args.functionToCall],
-	stdout = sp.PIPE) # stderr = sp.PIPE
+	stdout = subProc.PIPE) # stderr = supProc.PIPE
 
 	output = psResult.communicate() # if you want to use upside please add this area also; => output,error
 	#returnCode = psResult.returncode # "Return code given to Python script is: " + str(returnCode)
