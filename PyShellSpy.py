@@ -1,5 +1,5 @@
 import argparse,smtplib 
-import subprocess as sunproc
+import subprocess as subproc
 import urllib.request
 from email.mime.multipart import MIMEMultipart 
 from email.mime.text import MIMEText 
