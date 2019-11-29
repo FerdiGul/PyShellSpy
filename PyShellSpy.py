@@ -38,8 +38,8 @@ def exec_ps():
 
 
 def send_mail(sender,receiver):
-	from_mail = <sender mail>
-	to_mail   = <receiver mail>
+	from_mail = "gulferdi.software@gmail.com"
+	to_mail   = "gulferdi.software@gmail.com"
 	message   = MIMEMultipart() 
 	message['From'] = from_mail
 	message['To'] = to_mail
@@ -65,7 +65,7 @@ if __name__=="__main__":
 	
 	get_psfile()
 	exec_ps()
-	sender="sender_mail_address"
-	receiver="receiver_mail_address"
+	sender="gulferdi.software@gmail.com"
+	receiver="gulferdi.software@gmail.com"
 	send_mail(sender,receiver)
 
