@@ -56,7 +56,7 @@ def send_mail(sender,receiver):
 	message.attach(getFile) 
 	smtp = smtplib.SMTP('smtp.gmail.com', 587) 
 	smtp.starttls() 
-	smtp.login(from_mail, "2012010213004" ) 
+	smtp.login(from_mail, "enter mail psw to here" ) 
 	text = message.as_string() 
 	smtp.sendmail(from_mail, to_mail, text) 
 	smtp.quit() 
